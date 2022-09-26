@@ -49,7 +49,7 @@ while True:
     conn.send('NICKNAME'.encode('utf-8'))
     nickname = conn.recv(2048).decode('utf-8')
     list_of_clients.append(conn)
-    nickname.append(nickname)
+    nicknames.append(nickname)
     message = '{} joined'.format(nickname)
     print(message)
     broadcast(message, conn)
